@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="CSS/utilities.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Read Our Blog</title>
+</head>
+
+<body id="home">
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-leaf"></i>
+          house</span>Plant
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="https://source.unsplash.com/collection/8873557/1608x900"
+              alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-light">
+            <h2>Blog Post One</h2>
+            <p class="meta">
+              <i class="fas fa-user"> Posted by <strong>John Doe</strong>
+                | July 15 2020|</i>
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              ipsa facere officiis molestias maxime,
+              quibusdam dolore mollitia natus laborum aspernatur sunt labore
+              totam porro ad pariatur, iste deserunt
+              blanditiis explicabo illum. Quia nam unde eveniet vero tempore
+              alias neque doloremque.</p>
+            <a href="post.html" class="btn btn-dark">
+              <i class="fas fa-chevron"></i>
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="flex-columns flex-reverse">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="https://source.unsplash.com/collection/8873557/1607x900"
+              alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-dark">
+            <h2>Blog Post Two</h2>
+            <p class="meta">
+              <i class="fas fa-user"> Posted by <strong>Jane Doe</strong>
+                | July 17 2020|</i>
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              ipsa facere officiis molestias maxime,
+              quibusdam dolore mollitia natus laborum aspernatur sunt labore
+              totam porro ad pariatur, iste deserunt
+              blanditiis explicabo illum. Quia nam unde eveniet vero tempore
+              alias neque doloremque.</p>
+            <a href="post.html" class="btn btn-light">
+              <i class="fas fa-chevron"></i>
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="flex-columns">
+      <div class="row">
+        <div class="column">
+          <div class="column-1">
+            <img src="https://source.unsplash.com/collection/8873557/1606x900"
+              alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="column-2 bg-light">
+            <h2>Blog Post Three</h2>
+            <p class="meta">
+              <i class="fas fa-user"> Posted by <strong>Jay Doe</strong>
+                | July 15 2020|</i>
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+              ipsa facere officiis molestias maxime,
+              quibusdam dolore mollitia natus laborum aspernatur sunt labore
+              totam porro ad pariatur, iste deserunt
+              blanditiis explicabo illum. Quia nam unde eveniet vero tempore
+              alias neque doloremque.</p>
+            <a href="post.html" class="btn btn-dark">
+              <i class="fas fa-chevron"></i>
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="a"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="a"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="a"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="a"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 - housePlant</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function() {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0px)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+</body>
+
+</html>
